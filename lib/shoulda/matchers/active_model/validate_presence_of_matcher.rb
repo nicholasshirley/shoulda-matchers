@@ -148,7 +148,6 @@ module Shoulda
 
         def secure_password_being_validated?
           defined?(::ActiveModel::SecurePassword) &&
-            "authenticate_#{@subject}" &&
             @attribute == :password
         end
 
