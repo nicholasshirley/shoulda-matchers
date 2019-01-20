@@ -148,7 +148,7 @@ module Shoulda
 
         def secure_password_being_validated?
           defined?(::ActiveModel::SecurePassword) &&
-            @subject.class.ancestors.include?(::ActiveModel::SecurePassword::InstanceMethodsOnActivation) &&
+            "authenticate_#{@subject}" &&
             @attribute == :password
         end
 
